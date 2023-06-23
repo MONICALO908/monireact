@@ -1,0 +1,13 @@
+.app-main {
+  border: 1px solid rgb(14, 1, 1);
+  padding: 50px;
+  width: 500px;
+  font-weight: 600; 
+  background-color: rgb(155, 155, 221);
+  border-radius: 15px 15px 15px 15px;
+}
+.screen{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
