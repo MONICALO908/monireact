@@ -1,7 +1,7 @@
 import { useState } from "react"
 import "./Header.css"
 
-export function Header({setTasksState}) {
+export function Header({create}) {
 
     let newTask
 
@@ -16,9 +16,6 @@ export function Header({setTasksState}) {
         </div>
     </>
 
-    function create (newTask){
-        setTasksState(tasksState => [...tasksState, newTask])
-    }
 
     function handle(event){
         newTask = event.target.value
