@@ -9,7 +9,10 @@ export default function Task({ todo, deleteTask, index }) {
         <div className="texts">
             <input type="radio" name={"radio-button" + index} checked={update} onChange={e => setUpdate(e.target.checked)}/>
             <label htmlFor={"radio_button" + index}></label>
-            <p className="">{todo}</p>
+            <div>
+                <h2 className="">{todo.name}</h2>
+                <p>{todo.description}</p>
+            </div>
         </div>
         <div className="buttons" >
             <button onClick={() => setUpdate(true)} >

@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react"
 
 export default function useTaskList(){
-    const [tasksState, setTasksState] = useState((localStorage.getItem('tasksState')).split("_"))
+    const localStorageParse = localStorage.getItem('tasksState')
+    const [tasksState, setTasksState] = useState(JSON.parse(localStorageParse) ?? [])
 
     useEffect(() => {
-        localStorage.setItem('tasksState', tasksState.join("_"));
+        localStorage.setItem('tasksState', JSON.stringify(tasksState));
     }, [tasksState]);
 
     function create (newTask){

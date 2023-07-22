@@ -7,7 +7,7 @@ export function TaskList ({tasks, deleteTask, clear}) {
             
             return <Task todo={task} deleteTask={deleteTask} key={i}  index={i}></Task>
         })}
-        <p>faltan tareas</p>
+        <p>Missing tasks</p>
         <button onClick={clear}>Clear</button>
     </div>;
 }
