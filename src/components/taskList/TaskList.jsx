@@ -1,6 +1,7 @@
 import Task from "../task/Task";
 
 export function TaskList ({tasks, deleteTask, clear}) {
+    
     return <div className="">
         {
         tasks.map((task, i)=>{

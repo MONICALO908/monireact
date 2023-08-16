@@ -1,10 +1,13 @@
 .header-button {
     background-color: aqua;
+    display: flex;
+    align-items: center;
     color: black;
     font-weight: 800;
     border-radius: 4px;
     margin-left: 5px;
     height: 100%;
+    font-size: 22px;
 }
 
 .app-title {

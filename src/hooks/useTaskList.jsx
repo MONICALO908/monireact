@@ -2,8 +2,16 @@ import { useEffect, useState } from "react"
 
 export default function useTaskList(){
     const localStorageParse = localStorage.getItem('tasksState')
-    const [tasksState, setTasksState] = useState(JSON.parse(localStorageParse) ?? [])
+    const [tasksState, setTasksState] = useState([])
 
+    
+    useEffect(()=>{
+        if(!Array.isArray(JSON.parse(localStorageParse))){
+            localStorage.removeItem("tasksState")
+        }
+        setTasksState(JSON.parse(localStorageParse) ?? [])
+    },[])
+    
     useEffect(() => {
         localStorage.setItem('tasksState', JSON.stringify(tasksState));
     }, [tasksState]);

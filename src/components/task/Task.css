@@ -2,12 +2,24 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 5px 0px;
 }
 .texts{
     display: flex;
     width: 60%;
 }
+.texts h3{
+    margin: 5px 0px;
+}
 
+.texts p{
+   margin: 0;
+}
 .buttons button{
     margin-left: 20px;
     background-color: aqua;
