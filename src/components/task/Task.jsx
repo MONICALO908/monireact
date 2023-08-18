@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./Task.css"
+import { IconButton } from "@chakra-ui/react";
+import { DeleteIcon, EditIcon } from "@chakra-ui/icons";
 
 export default function Task({ todo, deleteTask, index }) {
 
@@ -15,12 +17,21 @@ export default function Task({ todo, deleteTask, index }) {
             </div>
         </div>
         <div className="buttons" >
-            <button onClick={() => setUpdate(true)} >
-                <img src="../../src/assets/editar.png" alt="" style={{ width: 15 + "px" }} />
-            </button>
-            <button onClick={() => deleteTask(index)}>
-                <img src="../../src/assets/eliminar.png" alt="" style={{ width: 15 + "px" }} />
-            </button>
+            <IconButton
+                onClick={() => setUpdate(true)}
+                colorScheme='teal'
+                aria-label='Update'
+                h={"8"}
+                icon={<EditIcon/>}
+            />
+            <IconButton
+               onClick={() => deleteTask(index)}
+                colorScheme='teal'
+                aria-label='Delete'
+                h={"8"}
+                marginLeft={"2"}
+                icon={<DeleteIcon/>}
+            />
         </div>
     </div>;
 

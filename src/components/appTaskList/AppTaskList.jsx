@@ -1,8 +1,9 @@
 
-import { Header}  from "../header/Header"
-import {TaskList} from "../taskList/TaskList"
+import { Header } from "../header/Header"
+import { TaskList } from "../taskList/TaskList"
 import "./appTaskList.css"
 import useTaskList from "../../hooks/useTaskList"
+import { Box } from "@chakra-ui/react"
 
 function AppTaskList() {
 
@@ -10,12 +11,12 @@ function AppTaskList() {
 
   return (
     <div className="screen">
-      <div className="app-main">
+      <Box borderRadius={"15"} w={"500"} padding={"50"} bgColor={"#92dcdc"}>
         <Header create={create}></Header>
         <TaskList tasks={tasksState} deleteTask={deleteTask} clear={clear}></TaskList>
-      </div>
+      </Box>
     </div>
-     
+
   )
-  } 
-  export default AppTaskList
+}
+export default AppTaskList
