@@ -1,3 +1,3 @@
 export default function Home (){
-    return <h1>BIENVENIDO A NUESTRA APP</h1>
+    return <h3>¡Bienvenidos a nuestra APP!</h3>
 }

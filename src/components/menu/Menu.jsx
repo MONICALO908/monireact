@@ -1,5 +1,8 @@
 import React, { Suspense } from "react";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import { AppHeader } from "../appHeader/appHeader";
+import { ChakraProvider } from '@chakra-ui/react'
+
 export default function Menu() {
     const HomePage = React.lazy(() => import("../home/Home"));
     const AboutPage = React.lazy(() => import("../sobreNosotros/SobreNosotros"))
@@ -7,19 +10,9 @@ export default function Menu() {
 
     return <BrowserRouter>
         <div>
-            <nav>
-                <ul>
-                    <li>
-                        <Link to="/">Home</Link>
-                    </li>
-                    <li>
-                        <Link to="/about">About</Link>
-                    </li>
-                    <li>
-                        <Link to="/taskList">TaskList</Link>
-                    </li>
-                </ul>
-            </nav>
+            <ChakraProvider>
+                <AppHeader></AppHeader>
+            </ChakraProvider>
             <Routes>
                 <Route
                     index
